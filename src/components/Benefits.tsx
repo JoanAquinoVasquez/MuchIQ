@@ -6,7 +6,7 @@ const Benefits = () => {
     {
       icon: Heart,
       title: "Revive la herencia cultural",
-      description: "Redescubre y difunde la tradición Moche y la riqueza del norte peruano",
+      description: "Redescubre y difunde la tradición peruana y la riqueza del norte peruano",
     },
     {
       icon: Leaf,

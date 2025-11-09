@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter, Mail, MapPin } from "lucide-react";
+import culturalPattern from "@/assets/icono_muchiq_landing.png";
 
 const Footer = () => {
   const links = {
@@ -41,7 +42,10 @@ const Footer = () => {
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-gradient-dragon rounded-xl flex items-center justify-center">
-                <span className="text-2xl">🐉</span>
+                <img 
+                src={culturalPattern}
+                alt="Icono"
+                />
               </div>
               <div>
                 <div className="text-2xl font-bold text-foreground">MuchIQ</div>
@@ -60,7 +64,7 @@ const Footer = () => {
             
             <div className="flex items-center gap-2 text-muted-foreground">
               <Mail className="w-5 h-5 text-primary" />
-              <span>contacto@dragonnorte.pe</span>
+              <span>contacto@muchiq.pe</span>
             </div>
             
             <div className="flex gap-4">

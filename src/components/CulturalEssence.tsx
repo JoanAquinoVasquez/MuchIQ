@@ -1,4 +1,4 @@
-import culturalPattern from "@/assets/saludo.gif";
+import culturalPattern from "@/assets/Video-Mascota-Trim.gif";
 
 const CulturalEssence = () => {
   return (
