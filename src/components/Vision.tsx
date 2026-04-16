@@ -1,54 +1,59 @@
 import React from "react";
-import { Bot, MapPin, Zap, Star } from "lucide-react";
+import { Flag, Compass, Heart, Gem } from "lucide-react";
 
 const Vision = () => {
   const pillars = [
     {
-      icon: Bot,
-      title: "IA Ancestral",
-      description: "Nuestra IA no solo guía, interpreta la historia de Lambayeque para ti."
+      icon: Flag,
+      title: "Modelo Nacional",
+      description: "Convertir a Lambayeque en el referente de turismo cultural y digital para todo el Perú."
     },
     {
-      icon: MapPin,
-      title: "Geolocalización 2.0",
-      description: "Descubre lugares ocultos con la precisión que implementamos para el explorador moderno."
+      icon: Compass,
+      title: "Identidad Viva",
+      description: "Hacer que cada recorrido sea una forma de preservar y visibilizar nuestras raíces."
     },
     {
-      icon: Zap,
-      title: "Impacto Local",
-      description: "Conectamos directamente con artesanos y negocios locales sin intermediarios."
+      icon: Heart,
+      title: "Impacto Colectivo",
+      description: "Asegurar que cada compra y visita impulse directamente la economía del artesano y el local."
     },
     {
-      icon: Star,
-      title: "Gamificación",
-      description: "Gana recompensas reales mientras aprendes sobre la cultura Mochica."
+      icon: Gem,
+      title: "Destino Inteligente",
+      description: "Un futuro sostenible donde la tecnología ayuda a ordenar y potenciar nuestro patrimonio."
     }
   ];
 
   return (
-    <section className="section-padding bg-background">
+    <section id="vision" className="py-32 bg-background">
       <div className="container px-4 mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          <div className="max-w-2xl space-y-4">
-            <p className="text-primary font-bold tracking-widest uppercase text-xs">Nuestro ADN</p>
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter">
-              Tecnología que <br /> respeta la historia.
+        <div className="flex flex-col lg:flex-row justify-between items-center mb-24 gap-12">
+          <div className="max-w-2xl space-y-6 text-center lg:text-left">
+            <p className="text-secondary font-black tracking-[0.3em] uppercase text-xs">Nuestra Misión</p>
+            <h2 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.85]">
+              Raíces que <br />
+              miran al <span className="text-gradient">futuro.</span> 
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-sm text-lg leading-relaxed">
-            Hemos desarrollado un ecosistema digital que pone el poder de Lambayeque en la palma de tu mano.
-          </p>
+          <div className="max-w-md">
+             <p className="text-muted-foreground text-xl leading-relaxed italic border-l-4 border-primary pl-6 py-2">
+              "Ayúdennos a hacer de Lambayeque un destino inteligente y sostenible que inspire al resto del país."
+             </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {pillars.map((pillar, i) => (
-            <div key={i} className="space-y-6 group animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
-              <div className="w-12 h-12 bg-muted rounded-2xl flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                <pillar.icon className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-xl font-bold">{pillar.title}</h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">{pillar.description}</p>
+            <div key={i} className="group p-10 rounded-[2.5rem] bg-muted/30 hover:bg-white border border-transparent hover:border-border/50 hover:shadow-2xl transition-all duration-500">
+              <div className="space-y-8">
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-primary group-hover:text-white transition-all transform group-hover:rotate-6">
+                  <pillar.icon className="w-7 h-7" />
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-black text-foreground tracking-tight">{pillar.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed font-medium">{pillar.description}</p>
+                </div>
               </div>
             </div>
           ))}

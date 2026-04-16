@@ -1,50 +1,61 @@
 import React from "react";
 import { WaitlistForm } from "./WaitlistForm";
-import { Sparkles, ArrowRight, Star } from "lucide-react";
+import { Sparkles, Globe, MapPin } from "lucide-react";
 
 const CTA = () => {
-    return (
-        <section className="section-padding bg-foreground text-background relative overflow-hidden">
-            {/* Background Accent */}
-            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[150px] translate-x-1/2 -translate-y-1/2" />
-            
-            <div className="container px-4 mx-auto relative z-10">
-                <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-12">
-                    
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm animate-fade-up">
-                        <Star className="w-5 h-5 text-secondary fill-secondary" />
-                        <span className="text-sm font-bold uppercase tracking-widest">Únete a los Pioneros</span>
-                    </div>
+  return (
+    <section id="waitlist-section" className="py-32 bg-foreground relative overflow-hidden">
+      {/* Background Ornaments for Tech/Culture Mix */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -mr-64 -mt-64" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[100px] -ml-64 -mb-64" />
 
-                    <div className="space-y-6 animate-fade-up" style={{ animationDelay: '100ms' }}>
-                        <h2 className="text-5xl md:text-7xl font-black leading-tight tracking-tighter">
-                            No solo visites el norte. <br />
-                            <span className="text-primary italic">Siéntelo.</span>
-                        </h2>
-                        <p className="text-xl text-background/60 max-w-2xl mx-auto leading-relaxed">
-                            Estamos construyendo algo único. Los primeros 50 registrados recibirán el badge de "Explorador Fundador" con beneficios vitalicios en la plataforma.
-                        </p>
-                    </div>
-
-                    <div className="w-full flex justify-center animate-fade-up" style={{ animationDelay: '200ms' }}>
-                        <WaitlistForm variant="cta" />
-                    </div>
-
-                    <div className="flex items-center gap-8 pt-8 animate-fade-up" style={{ animationDelay: '300ms' }}>
-                        <div className="text-center">
-                            <p className="text-3xl font-black">2026</p>
-                            <p className="text-[10px] font-bold uppercase tracking-widest text-background/40">Lanzamiento</p>
-                        </div>
-                        <div className="w-[1px] h-12 bg-white/20" />
-                        <div className="text-center">
-                            <p className="text-3xl font-black">100%</p>
-                            <p className="text-[10px] font-bold uppercase tracking-widest text-background/40">Cultural</p>
-                        </div>
-                    </div>
-                </div>
+      <div className="container px-4 mx-auto relative z-10">
+        <div className="max-w-5xl mx-auto rounded-[4rem] bg-white/5 backdrop-blur-3xl border border-white/10 p-12 md:p-24 text-center space-y-16 shadow-2xl">
+          
+          <div className="space-y-8 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
+               <Sparkles className="w-4 h-4 text-primary" />
+               <span className="text-[10px] font-black text-white/80 uppercase tracking-[0.3em]">Acceso Beta Fundador</span>
             </div>
-        </section>
-    );
+            
+            <h2 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.85]">
+              Sé parte de la <br />
+              <span className="text-primary italic">próxima expedición.</span>
+            </h2>
+            
+            <p className="text-xl md:text-2xl text-white/60 font-medium leading-relaxed max-w-xl mx-auto">
+              Únete a la lista de espera exclusiva y sé de los primeros en experimentar el norte peruano con tu propio mentor inteligente.
+            </p>
+          </div>
+
+          <div className="flex justify-center max-w-xl mx-auto">
+             <WaitlistForm variant="cta" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-white/10">
+             <div className="flex items-center justify-center gap-3">
+               <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
+                 <Globe className="w-5 h-5 text-primary" />
+               </div>
+               <span className="text-[10px] font-black text-white/40 uppercase tracking-widest text-left">Impacto <br />Cultural</span>
+             </div>
+             <div className="flex items-center justify-center gap-3">
+               <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
+                 <MapPin className="w-5 h-5 text-primary" />
+               </div>
+               <span className="text-[10px] font-black text-white/40 uppercase tracking-widest text-left">Hecho en <br />Lambayeque</span>
+             </div>
+             <div className="flex items-center justify-center gap-3">
+               <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
+                 <Sparkles className="w-5 h-5 text-primary" />
+               </div>
+               <span className="text-[10px] font-black text-white/40 uppercase tracking-widest text-left">Poder <br />AI</span>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default CTA;
