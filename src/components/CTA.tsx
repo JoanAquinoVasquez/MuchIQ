@@ -1,99 +1,50 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { User, Building2, ArrowRight } from "lucide-react";
+import React from "react";
+import { WaitlistForm } from "./WaitlistForm";
+import { Sparkles, ArrowRight, Star } from "lucide-react";
 
 const CTA = () => {
-  return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-mochica opacity-5" />
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Únete al <span className="text-gradient-mochica">vuelo del dragón</span>
-          </h2>
-          
-          <p className="text-xl text-muted-foreground">
-            Elige tu camino y comienza tu aventura en el norte peruano
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Explorer Card */}
-          <Card className="hover-lift border-2 hover:border-primary/50 transition-all duration-300 group bg-card/80 backdrop-blur-sm">
-            <CardContent className="p-10 space-y-6">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <User className="w-8 h-8 text-primary" />
-              </div>
-              
-              <div className="space-y-3">
-                <h3 className="text-3xl font-bold text-foreground">Soy Explorador</h3>
-                <p className="text-lg text-muted-foreground">
-                  Descubre lugares únicos, gana puntos y vive experiencias inolvidables
-                </p>
-              </div>
-              
-              <ul className="space-y-3">
-                <li className="flex items-center gap-2 text-foreground">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                  Recomendaciones personalizadas
-                </li>
-                <li className="flex items-center gap-2 text-foreground">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                  Rutas culturales y gastronómicas
-                </li>
-                <li className="flex items-center gap-2 text-foreground">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                  Sistema de recompensas
-                </li>
-              </ul>
-              
-              <Button variant="hero" size="lg" className="w-full group">
-                Registrarme como Explorador
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </CardContent>
-          </Card>
-          
-          {/* Business Card */}
-          <Card className="hover-lift border-2 hover:border-accent/50 transition-all duration-300 group bg-card/80 backdrop-blur-sm">
-            <CardContent className="p-10 space-y-6">
-              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Building2 className="w-8 h-8 text-accent" />
-              </div>
-              
-              <div className="space-y-3">
-                <h3 className="text-3xl font-bold text-foreground">Soy Aliado</h3>
-                <p className="text-lg text-muted-foreground">
-                  Aumenta tu visibilidad, conecta con turistas y crece tu negocio
-                </p>
-              </div>
-              
-              <ul className="space-y-3">
-                <li className="flex items-center gap-2 text-foreground">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full" />
-                  Aparece en el mapa turístico
-                </li>
-                <li className="flex items-center gap-2 text-foreground">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full" />
-                  Estadísticas y análisis
-                </li>
-                <li className="flex items-center gap-2 text-foreground">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full" />
-                  Promociones exclusivas
-                </li>
-              </ul>
-              
-              <Button variant="cultural" size="lg" className="w-full group">
-                Registrar mi Negocio
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </section>
-  );
+    return (
+        <section className="section-padding bg-foreground text-background relative overflow-hidden">
+            {/* Background Accent */}
+            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[150px] translate-x-1/2 -translate-y-1/2" />
+            
+            <div className="container px-4 mx-auto relative z-10">
+                <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-12">
+                    
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm animate-fade-up">
+                        <Star className="w-5 h-5 text-secondary fill-secondary" />
+                        <span className="text-sm font-bold uppercase tracking-widest">Únete a los Pioneros</span>
+                    </div>
+
+                    <div className="space-y-6 animate-fade-up" style={{ animationDelay: '100ms' }}>
+                        <h2 className="text-5xl md:text-7xl font-black leading-tight tracking-tighter">
+                            No solo visites el norte. <br />
+                            <span className="text-primary italic">Siéntelo.</span>
+                        </h2>
+                        <p className="text-xl text-background/60 max-w-2xl mx-auto leading-relaxed">
+                            Estamos construyendo algo único. Los primeros 50 registrados recibirán el badge de "Explorador Fundador" con beneficios vitalicios en la plataforma.
+                        </p>
+                    </div>
+
+                    <div className="w-full flex justify-center animate-fade-up" style={{ animationDelay: '200ms' }}>
+                        <WaitlistForm variant="cta" />
+                    </div>
+
+                    <div className="flex items-center gap-8 pt-8 animate-fade-up" style={{ animationDelay: '300ms' }}>
+                        <div className="text-center">
+                            <p className="text-3xl font-black">2026</p>
+                            <p className="text-[10px] font-bold uppercase tracking-widest text-background/40">Lanzamiento</p>
+                        </div>
+                        <div className="w-[1px] h-12 bg-white/20" />
+                        <div className="text-center">
+                            <p className="text-3xl font-black">100%</p>
+                            <p className="text-[10px] font-bold uppercase tracking-widest text-background/40">Cultural</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default CTA;

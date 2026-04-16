@@ -1,95 +1,116 @@
-import { Button } from "@/components/ui/button";
-import { Sparkles, MapPin, Download } from "lucide-react";
-import dragonHero from "@/assets/museo.png";
+import React from "react";
+import { WaitlistForm } from "./WaitlistForm";
+import { Sparkles, ShieldCheck, Globe, Zap } from "lucide-react";
+import museoImg from "@/assets/museo.png"; 
+import logoMuchiq from "@/assets/icono_muchiq_landing.png";
 
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-cultural">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 pattern-mochica opacity-50" />
-      
-      {/* Content */}
-      <div className="container relative z-10 px-4 py-20 mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8 animate-fade-in">
-            <div className="inline-flex items-center gap-2 bg-primary/10 backdrop-blur-sm px-4 py-2 rounded-full border border-primary/20">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-foreground">MuchIQ - App Móvil de Turismo Inteligente</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              <span className="text-gradient-mochica">Descubre</span>, explora y{" "}
-              <span className="text-gradient-mochica">vive</span> el norte como nunca antes
-            </h1>
-            
-            <p className="text-xl text-muted-foreground max-w-2xl">
-              Tu app de turismo inteligente que te conecta con la cultura, gastronomía y experiencias 
-              únicas del norte peruano
-            </p>
-            
-            <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" className="group">
-                <Download className="w-5 h-5 group-hover:animate-bounce" />
-                Descargar App
-              </Button>
-              <Button variant="cultural" size="lg" className="group">
-                <MapPin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                Explora Ahora
-              </Button>
-            </div>
-            
-            <div className="flex gap-8 pt-4">
-              <div>
-                <div className="text-3xl font-bold text-primary">500+</div>
-                <div className="text-sm text-muted-foreground">Lugares descubiertos</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-secondary">1000+</div>
-                <div className="text-sm text-muted-foreground">Usuarios activos</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-accent">150+</div>
-                <div className="text-sm text-muted-foreground">Socios aliados</div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Right Content - Dragon Image */}
-          <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden dragon-glow hover-lift">
-              <img 
-                src={dragonHero} 
-                alt="Dragón Mochica Andino - Símbolo de sabiduría y conexión cultural"
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-            </div>
-            
-            {/* Floating Elements */}
-            <div className="absolute -bottom-2 -right-8 bg-card border-2 border-primary/20 rounded-2xl p-4 shadow-xl animate-bounce">
-              <div className="flex items-end gap-3">
-                <div className="w-12 h-12 bg-gradient-dragon rounded-full flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-primary-foreground" />
+    return (
+        <section className="relative min-h-screen pt-32 pb-20 overflow-hidden bg-background selection:bg-primary/20">
+            {/* Advanced Ambient Lighting (Blobs) */}
+            <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] animate-pulse" />
+            <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px]" />
+
+            <div className="container px-4 mx-auto relative z-10">
+                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    
+                    {/* Content Section - Massive Impact */}
+                    <div className="flex-1 space-y-12 animate-fade-up">
+                        <div className="space-y-6">
+                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 shadow-sm">
+                                <img src={logoMuchiq} alt="MuchIQ Logo" className="w-5 h-5 object-contain" />
+                                <span className="text-[10px] font-black text-primary uppercase tracking-[0.2em]">MuchIQ Startup</span>
+                            </div>
+
+                            <h1 className="text-7xl md:text-9xl font-black text-foreground leading-[0.85] tracking-tighter">
+                                El norte <br />
+                                <span className="text-gradient">peruano,</span> <br />
+                                reimaginado.
+                            </h1>
+                            
+                            <p className="text-xl md:text-2xl text-muted-foreground max-w-xl leading-relaxed font-medium text-balance">
+                                La plataforma de inteligencia cultural que transforma tu smartphone en una ventana al pasado Mochica y Lambayeque.
+                            </p>
+                        </div>
+
+                        {/* Direct Waitlist Focus */}
+                        <div className="space-y-8 max-w-lg">
+                            <div className="flex items-center gap-3 text-primary font-black text-xs tracking-widest">
+                                <span className="relative flex h-3 w-3">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                                </span>
+                                ÚNETE A LA REVOLUCIÓN CULTURAL
+                            </div>
+                            
+                            <WaitlistForm variant="hero" />
+                            
+                            <div className="flex flex-wrap gap-8 pt-4">
+                                <div className="flex items-center gap-2.5 group cursor-default">
+                                    <div className="p-2 rounded-lg bg-muted group-hover:bg-primary/10 transition-colors">
+                                        <ShieldCheck className="w-5 h-5 text-primary" />
+                                    </div>
+                                    <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground group-hover:text-foreground transition-colors">Acceso Fundador</span>
+                                </div>
+                                <div className="flex items-center gap-2.5 group cursor-default">
+                                    <div className="p-2 rounded-lg bg-muted group-hover:bg-primary/10 transition-colors">
+                                        <Globe className="w-5 h-5 text-primary" />
+                                    </div>
+                                    <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground group-hover:text-foreground transition-colors">Turismo de Impacto</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Visual Section - Clean Tech Integration */}
+                    <div className="flex-1 relative w-full lg:w-auto mt-12 lg:mt-0 animate-fade-up" style={{ animationDelay: '200ms' }}>
+                        
+                        {/* Main Image Container */}
+                        <div className="relative z-20 rounded-[3rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] border-[12px] border-white group aspect-video lg:aspect-square max-w-2xl mx-auto lg:ml-auto focus-within:ring-4 ring-primary/20 transition-all">
+                            <img 
+                                src={museoImg} 
+                                alt="Experiencia Cultural Lambayeque" 
+                                className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-dark/20 to-transparent" />
+                        </div>
+                        
+                        {/* Corrected Floating AI Card - No more awkward overlapping */}
+                        <div className="absolute -top-10 -left-6 lg:-left-12 z-30 glass-card p-6 rounded-3xl animate-bounce shadow-2xl border border-white/40">
+                            <div className="flex items-center gap-4">
+                                <div className="bg-primary p-3 rounded-2xl shadow-indigo-500/20 shadow-xl">
+                                    <Zap className="w-6 h-6 text-white" />
+                                </div>
+                                <div>
+                                    <p className="text-[10px] font-black text-primary uppercase tracking-widest">AI Discovery</p>
+                                    <p className="text-sm font-black text-foreground">Engines Online</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Subtle Tech Badge - Bottom Right */}
+                        <div className="absolute -bottom-6 -right-4 lg:right-0 z-30 bg-foreground text-background px-6 py-3 rounded-2xl shadow-xl flex items-center gap-3">
+                            <Sparkles className="w-4 h-4 text-secondary" />
+                            <span className="text-[10px] font-black uppercase tracking-widest">Next-Gen Plataform</span>
+                        </div>
+
+                        {/* Tech Dots Ornament */}
+                        <div className="absolute top-1/2 -right-12 -translate-y-1/2 grid grid-cols-2 gap-3 opacity-20 pointer-events-none">
+                            {[...Array(12)].map((_, i) => (
+                                <div key={i} className="w-2 h-2 bg-primary rounded-full" />
+                            ))}
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  <div className="text-sm font-semibold text-foreground">Nuevo Logro</div>
-                  <div className="text-xs text-muted-foreground">+50 puntos ganados</div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-          <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="hsl(var(--background))"/>
-        </svg>
-      </div>
-    </section>
-  );
+            
+            {/* Enhanced Scroll Indicator */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-30 hover:opacity-100 transition-opacity cursor-pointer">
+                <span className="text-[10px] font-black tracking-[0.3em] uppercase">Muchiq Experience</span>
+                <div className="w-[2px] h-12 bg-gradient-to-b from-primary to-transparent" />
+            </div>
+        </section>
+    );
 };
 
 export default Hero;
