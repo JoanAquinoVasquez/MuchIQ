@@ -1,6 +1,7 @@
 import React from "react";
 import { Facebook, Instagram, Mail, MapPin, Sparkles } from "lucide-react";
 import culturalPattern from "@/assets/icono_muchiq_landing.png";
+import eesLogo from "@/assets/ees.png";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg
@@ -82,13 +83,29 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-10 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
-            © 2026 MuchIQ. Inspirado en el Dragón Mochica.
-          </p>
-          <div className="flex items-center gap-1.5 opacity-40 hover:opacity-100 transition-all cursor-default">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-[10px] font-black uppercase tracking-widest">Made in Lambayeque</span>
+        <div className="pt-10 border-t border-border flex flex-col items-center justify-center gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+            {/* Copyright */}
+            <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em] text-center">
+              © 2026 MuchIQ
+            </p>
+
+            {/* Badge con Link a Instagram */}
+            <a
+              href="https://www.instagram.com/emprendedoresenserie.la/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 px-6 py-3 bg-muted/30 rounded-2xl border border-border/50 group hover:bg-white hover:shadow-sm hover:border-primary/20 transition-all duration-500 cursor-pointer"
+            >
+              <span className="text-[9px] font-black text-muted-foreground uppercase tracking-[0.3em] group-hover:text-primary transition-colors">
+                Impulsado por
+              </span>
+              <img
+                src={eesLogo}
+                alt="EES Logo"
+                className="h-10 w-auto object-contain opacity-70 group-hover:opacity-100 transition-all duration-500 hover:scale-105"
+              />
+            </a>
           </div>
         </div>
       </div>
