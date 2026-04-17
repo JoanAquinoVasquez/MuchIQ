@@ -25,7 +25,7 @@ const ValidationMVP = () => {
                   del turismo <span className="text-gradient">ahora.</span>
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
-                  Escanea el código QR para acceder a nuestra demo interactiva y ayúdanos a validar la experiencia MuchIQ antes del lanzamiento global.
+                  Escanea el código QR para entrar a la beta pública. Empieza a planear tu viaje a Lambayeque con el poder de la Inteligencia Artificial.
                 </p>
               </div>
 

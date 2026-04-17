@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ProductShowcase from "@/components/ProductShowcase";
 import ImpactSection from "@/components/ImpactSection";
 import ProblemSolution from "@/components/ProblemSolution";
 import Vision from "@/components/Vision";
@@ -15,6 +16,7 @@ const Index = () => {
       <main>
         {/* LA HISTORIA COMPLETA (Manifiesto MuchIQ) */}
         <Hero />
+        <ProductShowcase />
         <ImpactSection />
         <ProblemSolution />
         <Vision />

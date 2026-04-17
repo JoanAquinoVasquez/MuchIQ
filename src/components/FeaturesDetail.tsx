@@ -11,6 +11,12 @@ const FeaturesDetail = () => {
       color: "bg-amber-500"
     },
     {
+      title: "Planificación inteligente",
+      description: "Genera itinerarios personalizados en segundos basados en tus gustos y ubicación.",
+      icon: Map,
+      color: "bg-primary"
+    },
+    {
       title: "Rutas con IA y GPS",
       description: "Información en tiempo real y guías personalizados para una experiencia auténtica y premiada.",
       icon: Map,
@@ -34,13 +40,13 @@ const FeaturesDetail = () => {
     <section id="features" className="py-32 bg-background relative overflow-hidden">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-24">
-          
+
           {/* App Proof */}
           <div className="flex-1 relative order-2 lg:order-1">
             <div className="relative z-20 w-full max-w-[340px] aspect-[9/19] bg-foreground rounded-[3.5rem] border-[10px] border-white shadow-2xl mx-auto overflow-hidden">
-              <img 
-                src={appPreview} 
-                alt="MuchIQ Gamified Experience" 
+              <img
+                src={appPreview}
+                alt="MuchIQ Gamified Experience"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -51,7 +57,7 @@ const FeaturesDetail = () => {
           <div className="flex-1 space-y-16 order-1 lg:order-2" id="negocios">
             <div className="space-y-6 text-center lg:text-left">
               <div className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full">
-                 <span className="text-[10px] font-black text-primary uppercase tracking-[0.2em]">Ecosistema MuchIQ</span>
+                <span className="text-[10px] font-black text-primary uppercase tracking-[0.2em]">Ecosistema MuchIQ</span>
               </div>
               <h2 className="text-5xl md:text-7xl font-black tracking-tight leading-[0.9]">
                 Cada visita es una <br />
